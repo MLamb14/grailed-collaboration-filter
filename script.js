@@ -1,8 +1,10 @@
 let staffPicks = document.getElementsByClassName("Module--ListingsFromFeed");
 let feedItems = document.getElementsByClassName("feed-item");
+let feedItemsLoopIndex = feedItems.length - 1;
 
 function deleteStaff () {
     staffPicks[0].parentElement.removeChild(staffPicks[0]);
+    feedItemsLoopIndex = feedItems.length - 1;
 }
 // Currently need to call this function before performing the for loop
 
@@ -12,7 +14,7 @@ function checkText(feedIndex, wordToCheck) {
     }
 }
 
-for (let i = 0; i < feedItems.length; i++) {
+for (let i = feedItemsLoopIndex; i > -1; i--) {
     checkText(i, "Uniqlo");
     console.log(i);
 }
