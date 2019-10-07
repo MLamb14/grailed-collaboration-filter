@@ -6,7 +6,6 @@ let allCapsBrand = null;
 
 function deleteStaff () {
     staffPicks[0].parentElement.removeChild(staffPicks[0]);
-    feedItemsLoopIndex = feedItems.length - 1;
 }
 // Deletes the Staff Picks carousel so main feed can start at array index 0
 
