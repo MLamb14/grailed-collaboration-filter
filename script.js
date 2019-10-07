@@ -2,7 +2,6 @@ let staffPicks = document.getElementsByClassName("Module--ListingsFromFeed");
 let feedItems = document.getElementsByClassName("feed-item");
 let feedItemsLoopIndex = feedItems.length - 1; //has to be 1 less than length as the array starts at 0
 let brandToAvoid = null;
-let mainFeed = document.getElementsByClassName("feed");
 let allCapsBrand = null;
 
 function deleteStaff () {
