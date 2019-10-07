@@ -15,7 +15,7 @@ function checkText(feedIndex, wordToCheck) {
 }
 
 function checkTextLoop () {
-    let brandToAvoid = prompt("What brand would you like to remove?");
+    let brandToAvoid = prompt("What brand would you like to remove? Case sensitive.");
     feedItemsLoopIndex = feedItems.length - 1;
     for (let i = feedItemsLoopIndex; i > -1; i--) {
     checkText(i, brandToAvoid);
