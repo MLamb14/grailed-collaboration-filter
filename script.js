@@ -1,6 +1,6 @@
 let staffPicks = document.getElementsByClassName("Module--ListingsFromFeed");
 let feedItems = document.getElementsByClassName("feed-item");
-let feedItemsLoopIndex = feedItems.length - 1;
+let feedItemsLoopIndex = feedItems.length - 1; //has to be 1 less than length as the array starts at 0
 
 function deleteStaff () {
     staffPicks[0].parentElement.removeChild(staffPicks[0]);
@@ -14,9 +14,13 @@ function checkText(feedIndex, wordToCheck) {
     }
 }
 
-for (let i = feedItemsLoopIndex; i > -1; i--) {
-    checkText(i, "Uniqlo");
+function checkTextLoop () {
+    let brandToAvoid = prompt("What brand would you like to remove?");
+    feedItemsLoopIndex = feedItems.length - 1;
+    for (let i = feedItemsLoopIndex; i > -1; i--) {
+    checkText(i, brandToAvoid);
     console.log(i);
+    }
 }
 
 // Steps needed:
